@@ -8,7 +8,7 @@ export default function useValidatedInput(initialText, validator) {
     const newText = e.target.value;
     const error = validator(newText);
     setError(error);
-    setText(text);
+    setText(newText);
   };
 
   return [{ value: text, onChange }, error];
